@@ -1,0 +1,131 @@
+<!-- This file now has more vehicle types and more traffic flows (with corrected comment syntax) -->
+<routes>
+    <!-- 1. DEFINE VEHICLE TYPES -->
+    
+    <vType id="car" 
+           vClass="passenger" 
+           accel="2.6" 
+           decel="4.5" 
+           sigma="0.5" 
+           length="5" 
+           minGap="2.5" 
+           maxSpeed="50" 
+           guiShape="passenger"/>
+
+    <vType id="motorcycle" 
+           vClass="motorcycle" 
+           accel="3.5" 
+           decel="5.0" 
+           sigma="0.5" 
+           length="2.5" 
+           minGap="1.0" 
+           maxSpeed="60" 
+           guiShape="motorcycle"/>
+           
+    <!-- NEW VEHICLE TYPE 1 -->
+    <vType id="truck"
+           vClass="truck"
+           accel="1.5"
+           decel="3.5"
+           sigma="0.5"
+           length="12"
+           minGap="3"
+           maxSpeed="40"
+           guiShape="truck"/>
+           
+    <!-- NEW VEHICLE TYPE 2 -->
+    <vType id="bus"
+           vClass="bus"
+           accel="1.2"
+           decel="3.0"
+           sigma="0.5"
+           length="15"
+           minGap="3"
+           maxSpeed="35"
+           guiShape="bus"/>
+
+    <!-- 2. DEFINE FLOWS -->
+    
+    <!-- Your original flows (I fixed the duplicate ID on the last one) -->
+    
+    <flow id="flow_main_cars" 
+          type="car" 
+          begin="0" 
+          end="1000" 
+          vehsPerHour="400" 
+          departLane="best" 
+          departSpeed="max" 
+          from="761955902#2" 
+          to="704227856#0" />
+
+    <flow id="flow_turning_bikes" 
+          type="motorcycle" 
+          begin="0" 
+          end="1000" 
+          vehsPerHour="200" 
+          departLane="best" 
+          departSpeed="max" 
+          from="527057142" 
+          to="34135098#1" />
+          
+    <flow id="flow_side_road_cars_1" 
+          type="car" 
+          begin="50" 
+          end="950" 
+          vehsPerHour="150" 
+          departLane="best" 
+          departSpeed="max" 
+          from="761955902#2" 
+          to="1058767099" />
+
+    <!-- *** I FIXED THIS: Renamed ID from "flow_side_road_cars" to "flow_side_road_cars_2" to avoid error *** -->
+    <flow id="flow_side_road_cars_2" 
+          type="car" 
+          begin="50" 
+          end="950" 
+          vehsPerHour="150" 
+          departLane="best" 
+          departSpeed="max" 
+          from="761955902#2" 
+          to="1058767099" />
+
+    <!-- 
+    ***************************************************
+    *** NEW FLOWS TO ADD "DIFFERENT VEHICLES" ***
+    ***************************************************
+    -->
+
+    <!-- NEW: Add TRUCKS to your first route. Start with a low number for trucks -->
+    <flow id="flow_main_trucks" 
+          type="truck" 
+          begin="50" 
+          end="950" 
+          vehsPerHour="50"
+          departLane="best" 
+          departSpeed="max" 
+          from="761955902#2" 
+          to="704227856#0" />
+
+    <!-- NEW: Add BUSES to your second route. Start with a low number for buses -->
+    <flow id="flow_turning_buses" 
+          type="bus" 
+          begin="100" 
+          end="900" 
+          vehsPerHour="30"
+          departLane="best" 
+          departSpeed="max" 
+          from="527057142" 
+          to="34135098#1" />
+          
+    <!-- NEW: Add more BIKES to your third route. More motorcycles -->
+    <flow id="flow_side_road_bikes" 
+          type="motorcycle" 
+          begin="0" 
+          end="1000" 
+          vehsPerHour="300"
+          departLane="best" 
+          departSpeed="max" 
+          from="761955902#2" 
+          to="1058767099" />
+
+</routes>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Generated on 2025-11-02 10:24:07 by Eclipse SUMO netedit Version 1.24.0
+(File attribute removed for Traci compatibility)
+-->
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Detectors -->
+    <!-- 'file' attribute removed so Traci (Python) can read the data. -->
+    <!-- 'period' changed to 1 for real-time updates. -->
+    <inductionLoop id="det_main_in_0" lane="704227856#0_1" pos="10.32" period="1.00"/>
+    <inductionLoop id="det_main_in_1" lane="34135098#1_0" pos="11.21" period="1.00"/>
+    <inductionLoop id="det_side_in_1" lane="1058767099_0" pos="7.72" period="1.00"/>
+    <inductionLoop id="e1_0" lane="527057142_0" pos="410.86" period="1.00"/>
+    <inductionLoop id="e1_2" lane="761955902#2_1" pos="573.84" period="1.00"/>
+</additional>
